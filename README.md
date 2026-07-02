@@ -424,4 +424,6 @@ Current Phase:
 
 # 📄 License
 
-This project is developed as a Final Year Project for the Bachelor of Computer Applications (BCA) program.
+This project is licensed under the **MIT License**.
+
+See the [LICENSE](LICENSE) file for more information.
