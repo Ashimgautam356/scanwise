@@ -1,159 +1,367 @@
-# Turborepo starter
+# ScanWise
 
-This Turborepo starter is maintained by the Turborepo core team.
+> **ScanWise** is an AI-powered mobile application that helps users understand everyday products by simplifying product information into easy-to-read language. Users can scan products, receive AI-generated explanations, manage expiry dates, and set medication reminders—all from a single app.
 
-## Using this example
+---
 
-Run the following command:
+## 📖 Project Description
 
-```sh
-npx create-turbo@latest
+Many consumer products, especially medicines, cosmetics, food items, and electronic devices, contain complex labels and instructions that are difficult for many users to understand.
+
+**ScanWise** solves this problem by using Artificial Intelligence and web-based information retrieval to provide users with simplified explanations of product usage, ingredients, precautions, and other important details.
+
+The application also includes productivity features such as expiry date notifications and medicine reminders, making it useful beyond simply identifying products.
+
+---
+
+# ✨ Features
+
+## 🤖 AI Product Simplification
+
+- Scan a product using the mobile camera.
+- Extract product information using OCR.
+- Allow users to provide additional product details if needed.
+- Search reliable online sources for product information.
+- Generate an AI-powered simplified explanation of:
+  - Product purpose
+  - Usage instructions
+  - Benefits
+  - Warnings
+  - Side effects (if applicable)
+  - Storage instructions
+
+---
+
+## 📷 Product Recognition
+
+- Camera-based product scanning.
+- OCR for reading product labels.
+- Manual product description input.
+- Support for multiple product categories.
+
+Examples:
+
+- Medicines
+- Food products
+- Cosmetics
+- Electronics
+- Household products
+
+---
+
+## 🌐 Intelligent Web Search
+
+The backend gathers product information from trusted online sources before sending the data to the AI model for summarization.
+
+---
+
+## 🔔 Expiry Date Reminder
+
+Users can:
+
+- Save product expiry dates
+- Receive reminder notifications before expiration
+- View upcoming expiries
+
+---
+
+## 💊 Medicine Reminder
+
+For medicines, users can:
+
+- Set dosage schedules
+- Configure reminder notifications
+- Track medication timing
+
+---
+
+## 📜 Product History
+
+Users can revisit previously scanned products without scanning them again.
+
+---
+
+## 📱 Mobile First
+
+ScanWise is designed primarily as a mobile application using React Native and Expo.
+
+---
+
+# 🏗️ Tech Stack
+
+## Mobile
+
+- React Native
+- Expo
+- TypeScript
+
+## Backend
+
+- Node.js
+- Express.js
+- TypeScript
+
+## AI Service
+
+- Python
+- FastAPI
+
+## Database
+
+(To be finalized)
+
+Possible options:
+
+- PostgreSQL
+- MongoDB
+
+## AI
+
+(To be finalized)
+
+Possible options:
+
+- OpenAI API
+- Gemini API
+- Local LLM
+
+---
+
+# 📂 Repository Structure
+
+```text
+ScanWise/
+├── apps
+│   └── backend
+|   └── mobile
+│
+├── docs
+├── lint-staged.config.mjs
+typescript-eslint
+├── package.json
+├── packages
+│   ├── eslint-config
+│   │   ├── base.js
+│   │   ├── next.js
+│   │   ├── node_modules
+│   │   ├── package.json
+│   │   ├── react.js
+│   │   └── README.md
+│   ├── typescript-config
+│   │   ├── base.json
+│   │   ├── nextjs.json
+│   │   ├── node.json
+│   │   ├── package.json
+│   │   ├── react-library.json
+│   │   └── react-native.json
+│   └── ui
+│       ├── eslint.config.mjs
+│       ├── node_modules
+│       ├── package.json
+│       ├── src
+│       └── tsconfig.json
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
+├── README.md
+├── scripts
+├── services
+└── turbo.json
 ```
 
-## What's inside?
+---
 
-This Turborepo includes the following packages/apps:
+# 👨‍💻 Team Members
 
-### Apps and Packages
+<!-- jo lay documentation padcha tesko name aauha hai ta guyz  -->
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+-please write your names
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+- Ashim Gautam
+  <!-- - Madan Bhandari -->
+  <!-- - Nishan Bhandari -->
+  <!-- - Nishant Bhattarai -->
 
-### Utilities
+---
 
-This Turborepo has some additional tools already setup for you:
+# 📋 Prerequisites
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+Install the following software before running the project.
 
-### Build
+## Node.js
 
-To build all apps and packages, run the following command:
+Recommended Version:
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo build
+```text
+v24.x LTS (or the latest stable version agreed upon by the team)
 ```
 
-Without global `turbo`, use your package manager:
+Check:
 
-```sh
-cd my-turborepo
-npx turbo build
-pnpm dlx turbo build
-pnpm exec turbo build
+```bash
+node -v
 ```
 
-You can build a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
+---
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
+## pnpm
 
-```sh
-turbo build --filter=docs
+Recommended Version:
+
+```text
+11.9.0
 ```
 
-Without global `turbo`:
+Check:
 
-```sh
-npx turbo build --filter=docs
-pnpm exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
+```bash
+pnpm -v
 ```
 
-### Develop
+---
 
-To develop all apps and packages, run the following command:
+## Git
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo dev
+```bash
+git --version
 ```
 
-Without global `turbo`, use your package manager:
+---
 
-```sh
-cd my-turborepo
-npx turbo dev
-pnpm exec turbo dev
-pnpm exec turbo dev
+# 🚀 Getting Started
+
+## Clone the repository
+
+```bash
+git clone <repository-url>
 ```
 
-You can develop a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
+---
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
+## Move into the project
 
-```sh
-turbo dev --filter=web
+```bash
+cd ScanWise
 ```
 
-Without global `turbo`:
+---
 
-```sh
-npx turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
+## Install dependencies
+
+```bash
+pnpm install
 ```
 
-### Remote Caching
+---
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+## Run development
 
-Turborepo can use a technique known as [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo login
+```bash
+pnpm dev
 ```
 
-Without global `turbo`, use your package manager:
+---
 
-```sh
-cd my-turborepo
-npx turbo login
-pnpm exec turbo login
-pnpm exec turbo login
+## Build project
+
+```bash
+pnpm build
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+---
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+## Run lint
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo link
+```bash
+pnpm lint
 ```
 
-Without global `turbo`:
+---
 
-```sh
-npx turbo link
-pnpm exec turbo link
-pnpm exec turbo link
+## Check TypeScript
+
+```bash
+pnpm check-types
 ```
 
-## Useful Links
+---
 
-Learn more about the power of Turborepo:
+## Format code
 
-- [Tasks](https://turborepo.dev/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.dev/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.dev/docs/reference/configuration)
-- [CLI Usage](https://turborepo.dev/docs/reference/command-line-reference)
+```bash
+pnpm format
+```
+
+---
+
+# 🛠 Development Workflow
+
+1. Create a new branch.
+
+```bash
+git checkout -b feature/feature-name
+```
+
+2. Make your changes.
+
+3. Stage the files.
+
+```bash
+git add .
+```
+
+4. Commit.
+
+```bash
+git commit -m "feat: add product scanning"
+```
+
+5. Push your branch.
+
+```bash
+git push origin feature/feature-name
+```
+
+6. Create a Pull Request.
+
+> **Do not push directly to the `main` branch.** All changes should go through a Pull Request and code review.
+
+---
+
+# 🧹 Code Quality
+
+This project uses:
+
+- Turborepo
+- ESLint
+- Prettier
+- Husky
+- lint-staged
+- TypeScript
+
+All staged files are automatically checked before each commit.
+
+---
+
+# 📌 Project Status
+
+Current Phase:
+
+- ✅ Repository initialized
+- ✅ Turborepo configured
+- ✅ pnpm workspace configured
+- ✅ ESLint configured
+- ✅ Prettier configured
+- ✅ Husky configured
+- ✅ lint-staged configured
+- ✅ Shared TypeScript configuration
+- ⏳ Mobile application setup
+- ⏳ Backend setup
+- ⏳ AI service setup
+- ⏳ Database integration
+- ⏳ Docker configuration
+
+---
+
+# 📄 License
+
+This project is developed as a Final Year Project for the Bachelor of Computer Applications (BCA) program.
