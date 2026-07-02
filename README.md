@@ -189,13 +189,13 @@ Install the following software before running the project.
 
 ## Node.js
 
-Recommended Version:
+**Recommended Version**
 
 ```text
-v24.x LTS (or the latest stable version agreed upon by the team)
+22.x LTS
 ```
 
-Check:
+Check the installed version:
 
 ```bash
 node -v
@@ -205,13 +205,13 @@ node -v
 
 ## pnpm
 
-Recommended Version:
+**Recommended Version**
 
 ```text
 11.9.0
 ```
 
-Check:
+Check the installed version:
 
 ```bash
 pnpm -v
@@ -219,7 +219,47 @@ pnpm -v
 
 ---
 
+## Python
+
+**Recommended Version**
+
+```text
+Python 3.11+
+```
+
+Check the installed version:
+
+```bash
+python3 --version
+```
+
+---
+
+## uv
+
+Install `uv` (Linux/macOS):
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Reload your shell:
+
+```bash
+source ~/.bashrc
+```
+
+Verify the installation:
+
+```bash
+uv --version
+```
+
+---
+
 ## Git
+
+Check the installed version:
 
 ```bash
 git --version
@@ -245,10 +285,32 @@ cd ScanWise
 
 ---
 
-## Install dependencies
+## Install JavaScript dependencies
 
 ```bash
 pnpm install
+```
+
+---
+
+## Install Python dependencies
+
+Move into the AI service:
+
+```bash
+cd services/ai-service
+```
+
+Install and synchronize the Python environment:
+
+```bash
+uv sync
+```
+
+Return to the project root:
+
+```bash
+cd ../..
 ```
 
 ---
@@ -290,8 +352,6 @@ pnpm check-types
 ```bash
 pnpm format
 ```
-
----
 
 # 🛠 Development Workflow
 
