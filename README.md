@@ -178,7 +178,7 @@ typescript-eslint
 
 - Ashim Gautam
 - Madan Bhandari
-  <!-- - Nishan Bhandari -->
+- Nishan Bhandari 
   <!-- - Nishant Bhattarai -->
 
 ---
