@@ -177,7 +177,7 @@ typescript-eslint
 -please write your names
 
 - Ashim Gautam
-  <!-- - Madan Bhandari -->
+- Madan Bhandari
   <!-- - Nishan Bhandari -->
   <!-- - Nishant Bhattarai -->
 
