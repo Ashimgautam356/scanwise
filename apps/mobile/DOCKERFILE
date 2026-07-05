@@ -1,0 +1,32 @@
+FROM node:22-bookworm
+
+# Enable pnpm
+RUN corepack enable
+RUN corepack prepare pnpm@11.9.0 --activate
+
+# Repository root inside the container
+WORKDIR /app
+
+COPY package.json .
+COPY pnpm-lock.yaml .
+COPY pnpm-workspace.yaml .
+COPY turbo.json .
+
+# Copy workspace packages
+COPY packages ./packages
+
+# Copy mobile application
+COPY apps/mobile ./apps/mobile
+
+# Install workspace dependencies
+RUN pnpm install --frozen-lockfile
+
+# Switch to the mobile app
+WORKDIR /app/apps/mobile
+
+EXPOSE 8081
+EXPOSE 19000
+EXPOSE 19001
+EXPOSE 19002
+
+CMD ["pnpm", "start", "--lan"]
