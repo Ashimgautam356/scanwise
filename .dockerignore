@@ -1,23 +1,22 @@
 node_modules
 **/node_modules
 
-.venv
-**/.venv
+.expo
+.expo-shared
 
 .git
-.gitignore
+.github
 
-.next
+.vscode
+
 dist
 build
+
 coverage
+
+.turbo
 
 .env
 .env.*
 
-.vscode
-.idea
-
-__pycache__
-.pytest_cache
-.ruff_cache
+*.log
