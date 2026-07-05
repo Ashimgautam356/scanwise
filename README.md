@@ -178,8 +178,8 @@ typescript-eslint
 
 - Ashim Gautam
 - Madan Bhandari
-- Nishan Bhandari 
-- Nishant Bhattarai 
+- Nishan Bhandari
+- Nishant Bhattarai
 
 ---
 
@@ -192,7 +192,7 @@ Install the following software before running the project.
 **Recommended Version**
 
 ```text
-22.x LTS
+24.18.0
 ```
 
 Check the installed version:
