@@ -1,10 +1,10 @@
-# 📄 AI Ecommerce MCP Project Proposal
+# 📄 Agentica Project Proposal
 
-This directory contains the project proposal for the **AI Ecommerce MCP** project.
+This directory contains the project proposal for the **Agentica** project.
 
 ## 📌 Project Overview
 
-AI Ecommerce MCP is an AI-powered e-commerce platform that integrates a Large Language Model (LLM) with an online shopping system using the **Model Context Protocol (MCP)**. The project enables users to interact with an intelligent shopping assistant capable of searching products, comparing items, managing carts, tracking orders, and assisting throughout the shopping experience.
+Agentica is an AI-powered e-commerce platform that integrates a Large Language Model (LLM) with an online shopping system using the **Model Context Protocol (MCP)**. The project enables users to interact with an intelligent shopping assistant capable of searching products, comparing items, managing carts, tracking orders, and assisting throughout the shopping experience.
 
 ## 🎯 Objectives
 
@@ -42,6 +42,22 @@ The system is designed with security as a priority.
 The complete proposal is available in this directory:
 
 - **Project_Proposal_AI_Ecommerce_MCP (2).docx**
+
+## 📂 Repository Structure
+
+```text
+Agentica/
+├── app
+│   ├── web
+│   ├── admin
+│   └── README.md
+├── backend
+│   ├── express
+│   ├── ai
+│   │   ├── ai-agents
+│   │   └── llms-service
+└── docs
+```
 
 ## 👥 Team Members
 

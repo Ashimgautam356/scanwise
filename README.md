@@ -1,180 +1,140 @@
-# ScanWise
+# Agentica
 
-> **ScanWise** is an AI-powered mobile application that helps users understand everyday products by simplifying product information into easy-to-read language. Users can scan products, receive AI-generated explanations, manage expiry dates, and set medication reminders—all from a single app.
+> **Agentica** is an AI-native e-commerce platform that integrates Large Language Models (LLMs) with an online shopping system through the **Model Context Protocol (MCP)**. It enables users to interact with an intelligent shopping assistant capable of discovering products, comparing options, managing carts, and performing shopping-related tasks through natural conversation.
 
 ---
 
-## 📖 Project Description
+# 📖 Project Description
 
-Many consumer products, especially medicines, cosmetics, food items, and electronic devices, contain complex labels and instructions that are difficult for many users to understand.
+Traditional e-commerce platforms require users to manually browse products, apply filters, compare items, and complete purchases through multiple screens.
 
-**ScanWise** solves this problem by using Artificial Intelligence and web-based information retrieval to provide users with simplified explanations of product usage, ingredients, precautions, and other important details.
+Agentica reimagines this experience by introducing an AI-powered shopping assistant capable of understanding natural language and securely interacting with the e-commerce system through the **Model Context Protocol (MCP)**.
 
-The application also includes productivity features such as expiry date notifications and medicine reminders, making it useful beyond simply identifying products.
+Instead of navigating complex interfaces, users can simply describe what they are looking for, and the AI assistant can search products, explain recommendations, manage shopping carts, and perform various shopping tasks while respecting authentication and authorization rules.
+
+The primary objective of this project is to explore how AI agents can safely interact with real-world software systems using MCP, rather than building another traditional e-commerce application.
 
 ---
 
 # ✨ Features
 
-## 🤖 AI Product Simplification
+## 🤖 AI Shopping Assistant
 
-- Scan a product using the mobile camera.
-- Extract product information using OCR.
-- Allow users to provide additional product details if needed.
-- Search reliable online sources for product information.
-- Generate an AI-powered simplified explanation of:
-  - Product purpose
-  - Usage instructions
-  - Benefits
-  - Warnings
-  - Side effects (if applicable)
-  - Storage instructions
+- Natural language conversations
+- Product recommendations
+- Product comparison
+- Personalized shopping assistance
+- Context-aware responses
 
 ---
 
-## 📷 Product Recognition
+## 🛍 Product Management
 
-- Camera-based product scanning.
-- OCR for reading product labels.
-- Manual product description input.
-- Support for multiple product categories.
-
-Examples:
-
-- Medicines
-- Food products
-- Cosmetics
-- Electronics
-- Household products
+- Browse products
+- Search products
+- Product categories
+- Product details
+- Product reviews
 
 ---
 
-## 🌐 Intelligent Web Search
+## 🛒 Shopping Cart
 
-The backend gathers product information from trusted online sources before sending the data to the AI model for summarization.
-
----
-
-## 🔔 Expiry Date Reminder
-
-Users can:
-
-- Save product expiry dates
-- Receive reminder notifications before expiration
-- View upcoming expiries
+- Add products to cart
+- Remove products
+- Update quantities
+- View cart summary
 
 ---
 
-## 💊 Medicine Reminder
+## 📦 Order Management
 
-For medicines, users can:
-
-- Set dosage schedules
-- Configure reminder notifications
-- Track medication timing
+- Place orders
+- View order history
+- Order notifications
 
 ---
 
-## 📜 Product History
+## 🔐 Authentication & Authorization
 
-Users can revisit previously scanned products without scanning them again.
+- Secure user authentication
+- Role-based authorization
+- Protected AI actions
+- JWT authentication
 
 ---
 
-## 📱 Mobile First
+## 🧠 Model Context Protocol (MCP)
 
-ScanWise is designed primarily as a mobile application using React Native and Expo.
+- MCP Server implementation
+- AI Tool Calling
+- Product search tools
+- Cart management tools
+- Order management tools
+- Secure backend integration
 
 ---
 
 # 🏗️ Tech Stack
 
-## Mobile
+## Frontend
 
-- React Native
-- Expo
+- React
+- Next.js
 - TypeScript
 
 ## Backend
 
 - Node.js
 - Express.js
-- TypeScript
+
+## Database
+
+- PostgreSQL
+- Prisma ORM
 
 ## AI Service
 
 - Python
 - FastAPI
 
-## Database
+## AI Integration
 
-(To be finalized)
+- OpenAI API (initial implementation)
+- Model Context Protocol (MCP)
 
-Possible options:
+## Infrastructure
 
-- PostgreSQL
-- MongoDB
-
-## AI
-
-(To be finalized)
-
-Possible options:
-
-- OpenAI API
-- Gemini API
-- Local LLM
+- pnpm
 
 ---
 
 # 📂 Repository Structure
 
 ```text
-ScanWise/
-├── apps
-│   └── backend
-|   └── mobile
+Agentica/
+├── app
+│   ├── web
+│   ├── admin
+│   └── README.md
+│
+├── backend
+│   ├── express
+│   ├── ai
+│   │   ├── ai-agents
+│   │   └── llms-service
 │
 ├── docs
-├── lint-staged.config.mjs
-typescript-eslint
-├── package.json
-├── packages
-│   ├── eslint-config
-│   │   ├── base.js
-│   │   ├── next.js
-│   │   ├── node_modules
-│   │   ├── package.json
-│   │   ├── react.js
-│   │   └── README.md
-│   ├── typescript-config
-│   │   ├── base.json
-│   │   ├── nextjs.json
-│   │   ├── node.json
-│   │   ├── package.json
-│   │   ├── react-library.json
-│   │   └── react-native.json
-│   └── ui
-│       ├── eslint.config.mjs
-│       ├── node_modules
-│       ├── package.json
-│       ├── src
-│       └── tsconfig.json
-├── pnpm-lock.yaml
-├── pnpm-workspace.yaml
-├── README.md
 ├── scripts
-├── services
-└── turbo.json
+├── .github
+│
+├── README.md
+└── LICENSE
 ```
 
 ---
 
 # 👨‍💻 Team Members
-
-<!-- jo lay documentation padcha tesko name aauha hai ta guyz  -->
-
--please write your names
 
 - Ashim Gautam
 - Madan Bhandari
@@ -189,13 +149,13 @@ Install the following software before running the project.
 
 ## Node.js
 
-**Recommended Version**
+**Version**
 
 ```text
 24.18.0
 ```
 
-Check the installed version:
+Check:
 
 ```bash
 node -v
@@ -205,13 +165,13 @@ node -v
 
 ## pnpm
 
-**Recommended Version**
+**Version**
 
 ```text
 11.9.0
 ```
 
-Check the installed version:
+Check:
 
 ```bash
 pnpm -v
@@ -221,13 +181,13 @@ pnpm -v
 
 ## Python
 
-**Recommended Version**
+**Version**
 
 ```text
 Python 3.11+
 ```
 
-Check the installed version:
+Check:
 
 ```bash
 python3 --version
@@ -237,19 +197,19 @@ python3 --version
 
 ## uv
 
-Install `uv` (Linux/macOS):
+Install:
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Reload your shell:
+Reload shell:
 
 ```bash
 source ~/.bashrc
 ```
 
-Verify the installation:
+Verify:
 
 ```bash
 uv --version
@@ -258,8 +218,6 @@ uv --version
 ---
 
 ## Git
-
-Check the installed version:
 
 ```bash
 git --version
@@ -280,7 +238,7 @@ git clone <repository-url>
 ## Move into the project
 
 ```bash
-cd ScanWise
+cd Agentica
 ```
 
 ---
@@ -288,6 +246,16 @@ cd ScanWise
 ## Install JavaScript dependencies
 
 ```bash
+cd app/web
+
+pnpm install
+
+cd ../admin
+
+pnpm install
+
+cd ../../backend/express
+
 pnpm install
 ```
 
@@ -295,35 +263,53 @@ pnpm install
 
 ## Install Python dependencies
 
-Move into the AI service:
-
 ```bash
-cd services/ai-service
-```
+cd backend/ai/llms-service
 
-Install and synchronize the Python environment:
-
-```bash
 uv sync
-```
 
-Return to the project root:
-
-```bash
-cd ../..
+cd ../../..
 ```
 
 ---
 
-## Run development
+## Run without Docker
+
+Web
 
 ```bash
+cd app/web
+
 pnpm dev
 ```
 
+Admin
+
+```bash
+cd app/admin
+
+pnpm dev
+```
+
+Express API
+
+```bash
+cd backend/express
+
+pnpm dev
+```
+
+AI Service
+
+```bash
+cd backend/ai/llms-service
+
+uv run main.py
+```
+
 ---
 
-## Build project
+## Build
 
 ```bash
 pnpm build
@@ -331,7 +317,7 @@ pnpm build
 
 ---
 
-## Run lint
+## Lint
 
 ```bash
 pnpm lint
@@ -339,7 +325,7 @@ pnpm lint
 
 ---
 
-## Check TypeScript
+## Type Checking
 
 ```bash
 pnpm check-types
@@ -347,11 +333,44 @@ pnpm check-types
 
 ---
 
-## Format code
+## Formatting
 
 ```bash
 pnpm format
 ```
+
+---
+
+## Pre-commit Checks
+
+Git commits run the Husky pre-commit hook at `.husky/pre-commit`.
+
+If hooks are not active on a fresh clone, run:
+
+```bash
+pnpm prepare
+```
+
+It calls:
+
+```bash
+pnpm verify
+```
+
+That orchestrates checks inside each project:
+
+- `app/web`: Prettier check, ESLint, TypeScript
+- `app/admin`: Prettier check, ESLint, TypeScript
+- `backend/express`: Prettier check, ESLint, TypeScript
+- `backend/ai/llms-service`: Ruff and Black check
+
+Run the same checks manually with:
+
+```bash
+pnpm verify
+```
+
+---
 
 # 🛠 Development Workflow
 
@@ -361,9 +380,9 @@ pnpm format
 git checkout -b feature/feature-name
 ```
 
-2. Make your changes.
+2. Implement your changes.
 
-3. Stage the files.
+3. Stage files.
 
 ```bash
 git add .
@@ -372,7 +391,7 @@ git add .
 4. Commit.
 
 ```bash
-git commit -m "feat: add product scanning"
+git commit -m "feat: add feature"
 ```
 
 5. Push your branch.
@@ -381,44 +400,56 @@ git commit -m "feat: add product scanning"
 git push origin feature/feature-name
 ```
 
-6. Create a Pull Request.
+6. Open a Pull Request.
 
-> **Do not push directly to the `main` branch.** All changes should go through a Pull Request and code review.
+> Do not push directly to the **main** branch.
 
 ---
 
 # 🧹 Code Quality
 
-This project uses:
+The project uses:
 
-- Turborepo
 - ESLint
 - Prettier
-- Husky
 - lint-staged
 - TypeScript
+- Ruff
+- Black
 
-All staged files are automatically checked before each commit.
+Frontend tooling lives under each app in `app/`. Express tooling lives under `backend/express`, and AI tooling lives under `backend/ai`.
 
 ---
 
-# 📌 Project Status
-
-Current Phase:
+# 📌 Current Progress
 
 - ✅ Repository initialized
-- ✅ Turborepo configured
 - ✅ pnpm workspace configured
 - ✅ ESLint configured
 - ✅ Prettier configured
 - ✅ Husky configured
 - ✅ lint-staged configured
 - ✅ Shared TypeScript configuration
-- ⏳ Mobile application setup
-- ⏳ Backend setup
-- ⏳ AI service setup
-- ⏳ Database integration
-- ⏳ Docker configuration
+- ⏳ Frontend development
+- ⏳ Backend development
+- ⏳ PostgreSQL integration
+- ⏳ Prisma ORM setup
+- ⏳ MCP Server implementation
+- ⏳ AI Service development
+- ⏳ Docker environment
+- ⏳ Authentication
+- ⏳ AI shopping assistant
+
+---
+
+# 🎯 Project Goals
+
+- Build an AI-native e-commerce platform.
+- Learn and implement Model Context Protocol (MCP).
+- Integrate LLMs with real-world software systems.
+- Design scalable backend architecture.
+- Develop secure AI-powered workflows.
+- Explore AI agent development and tool calling.
 
 ---
 
