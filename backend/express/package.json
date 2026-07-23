@@ -19,7 +19,8 @@
     "cors": "^2.8.5",
     "dotenv": "^17.3.0",
     "express": "^5.2.1",
-    "helmet": "^8.2.0"
+    "helmet": "^8.2.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
