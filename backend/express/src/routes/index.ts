@@ -1,3 +1,3 @@
-export { adminRouter } from "./admin.router.js";
-export { publicRouter } from "./public.router.js";
-export { superAdminRouter } from "./super-admin.router.js";
+export { adminRouter } from "./admin.router";
+export { publicRouter } from "./public.router";
+export { superAdminRouter } from "./super-admin.router";

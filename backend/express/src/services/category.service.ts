@@ -1,5 +1,5 @@
-import { prisma } from "../prisma.js";
-import type { CreateCategoryInput, UpdateCategoryInput } from "../schemas/category.schema.js";
+import { prisma } from "../prisma";
+import type { CreateCategoryInput, UpdateCategoryInput } from "../schemas/category.schema";
 
 export function listCategories() {
   return prisma.category.findMany({

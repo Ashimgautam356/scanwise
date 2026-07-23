@@ -1,6 +1,6 @@
 import { randomBytes, scryptSync } from "node:crypto";
-import { prisma } from "../prisma.js";
-import type { CreateUserInput, UpdateUserInput } from "../schemas/user.schema.js";
+import { prisma } from "../prisma";
+import type { CreateUserInput, UpdateUserInput } from "../schemas/user.schema";
 
 const userSelect = {
   id: true,

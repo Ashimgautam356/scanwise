@@ -1,11 +1,11 @@
 import { Router } from "express";
-import * as categoryController from "../controllers/category.controller.js";
-import * as productController from "../controllers/product.controller.js";
-import * as userController from "../controllers/user.controller.js";
-import { validate } from "../middleware/validate.js";
-import { categoryIdSchema } from "../schemas/category.schema.js";
-import { productIdSchema } from "../schemas/product.schema.js";
-import { updateUserSchema, userIdSchema } from "../schemas/user.schema.js";
+import * as categoryController from "../controllers/category.controller";
+import * as productController from "../controllers/product.controller";
+import * as userController from "../controllers/user.controller";
+import { validate } from "../middleware/validate";
+import { categoryIdSchema } from "../schemas/category.schema";
+import { productIdSchema } from "../schemas/product.schema";
+import { updateUserSchema, userIdSchema } from "../schemas/user.schema";
 
 export const publicRouter = Router();
 

@@ -1,7 +1,7 @@
 import { Router } from "express";
-import * as userController from "../controllers/user.controller.js";
-import { validate } from "../middleware/validate.js";
-import { userIdSchema } from "../schemas/user.schema.js";
+import * as userController from "../controllers/user.controller";
+import { validate } from "../middleware/validate";
+import { userIdSchema } from "../schemas/user.schema";
 
 export const superAdminRouter = Router();
 

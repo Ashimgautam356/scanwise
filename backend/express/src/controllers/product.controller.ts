@@ -1,6 +1,6 @@
 import type { RequestHandler } from "express";
-import { asyncHandler } from "../middleware/async-handler.js";
-import * as productService from "../services/product.service.js";
+import { asyncHandler } from "../middleware/async-handler";
+import * as productService from "../services/product.service";
 
 export const listProducts: RequestHandler = asyncHandler(async (_request, response) => {
   const products = await productService.listProducts();

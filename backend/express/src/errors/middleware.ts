@@ -1,6 +1,6 @@
 import type { ErrorRequestHandler, RequestHandler } from "express";
-import { ApiError, errorBody } from "./api-error.js";
-import { mapPrismaError } from "./prisma-error.js";
+import { ApiError, errorBody } from "./api-error";
+import { mapPrismaError } from "./prisma-error";
 
 export const notFoundHandler: RequestHandler = (request, _response, next) => {
   next(new ApiError("NOT_FOUND", `Route ${request.method} ${request.path} not found.`));

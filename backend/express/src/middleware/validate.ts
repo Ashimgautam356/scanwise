@@ -1,6 +1,6 @@
 import type { RequestHandler } from "express";
 import type { ZodType } from "zod";
-import { ApiError } from "../errors/api-error.js";
+import { ApiError } from "../errors/api-error";
 
 type RequestSchemas = {
   body?: ZodType;

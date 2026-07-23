@@ -1,4 +1,4 @@
-import { ApiError } from "./api-error.js";
+import { ApiError } from "./api-error";
 
 type PrismaKnownError = {
   code?: string;

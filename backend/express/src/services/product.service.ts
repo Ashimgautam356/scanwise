@@ -1,5 +1,5 @@
-import { prisma } from "../prisma.js";
-import type { CreateProductInput, UpdateProductInput } from "../schemas/product.schema.js";
+import { prisma } from "../prisma";
+import type { CreateProductInput, UpdateProductInput } from "../schemas/product.schema";
 
 export function listProducts() {
   return prisma.product.findMany({

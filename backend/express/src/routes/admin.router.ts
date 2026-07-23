@@ -1,19 +1,19 @@
 import { Router } from "express";
-import * as categoryController from "../controllers/category.controller.js";
-import * as productController from "../controllers/product.controller.js";
-import * as userController from "../controllers/user.controller.js";
-import { validate } from "../middleware/validate.js";
+import * as categoryController from "../controllers/category.controller";
+import * as productController from "../controllers/product.controller";
+import * as userController from "../controllers/user.controller";
+import { validate } from "../middleware/validate";
 import {
   categoryIdSchema,
   createCategorySchema,
   updateCategorySchema,
-} from "../schemas/category.schema.js";
+} from "../schemas/category.schema";
 import {
   createProductSchema,
   productIdSchema,
   updateProductSchema,
-} from "../schemas/product.schema.js";
-import { createUserSchema, updateUserSchema, userIdSchema } from "../schemas/user.schema.js";
+} from "../schemas/product.schema";
+import { createUserSchema, updateUserSchema, userIdSchema } from "../schemas/user.schema";
 
 export const adminRouter = Router();
 

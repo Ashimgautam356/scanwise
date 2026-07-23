@@ -1,18 +1,19 @@
 import cors from "cors";
 import express from "express";
 import helmet from "helmet";
-import { errorHandler, notFoundHandler } from "./errors/middleware.js";
-import { adminRouter, publicRouter, superAdminRouter } from "./routes/index.js";
+import { errorHandler, notFoundHandler } from "./errors/middleware";
+import { adminRouter, publicRouter, superAdminRouter } from "./routes/index";
 
 export function createApp() {
   const app = express();
 
   app.use(helmet());
-  app.use(
-    cors({
-      origin: process.env.CORS_ORIGIN ?? "http://localhost:3000",
-    }),
-  );
+  // app.use(
+  //   cors({
+  //     origin: process.env.CORS_ORIGIN ?? "http://localhost:3000",
+  //   }),
+  // );
+  app.use(cors());
   app.use(express.json());
 
   app.use("/api", publicRouter);
