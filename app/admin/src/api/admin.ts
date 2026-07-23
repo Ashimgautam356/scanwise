@@ -37,7 +37,13 @@ export type InventoryItem = {
   warehouse: string;
   updated: string;
 };
-export type Order = { id: string; customer: string; total: string; payment: string; status: string };
+export type Order = {
+  id: string;
+  customer: string;
+  total: string;
+  payment: string;
+  status: string;
+};
 export type Review = { product: string; rating: string; customer: string; status: string };
 export type Customer = { name: string; email: string; orders: number; status: string };
 export type AdminUser = { name: string; email: string; role: string; status: string };

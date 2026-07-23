@@ -7,7 +7,10 @@ export function StatGrid({ stats }: { stats: Stat[] }) {
       aria-label="Dashboard statistics"
     >
       {stats.map((stat) => (
-        <article className="grid min-h-32 gap-2.5 rounded-lg border border-slate-200 bg-white p-4" key={stat.label}>
+        <article
+          className="grid min-h-32 gap-2.5 rounded-lg border border-slate-200 bg-white p-4"
+          key={stat.label}
+        >
           <span className="text-sm font-bold text-slate-500">{stat.label}</span>
           <strong className="text-3xl font-bold">{stat.value}</strong>
           <small className="text-xs text-slate-500">{stat.note}</small>

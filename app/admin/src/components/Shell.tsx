@@ -24,11 +24,7 @@ const navItems: NavItem[] = [
   { key: "settings", label: "Settings", group: "System" },
 ];
 
-export function Shell({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export function Shell({ children }: { children: ReactNode }) {
   return (
     <div className="grid min-h-screen grid-cols-[260px_minmax(0,1fr)] bg-slate-100 text-slate-950 max-lg:grid-cols-1">
       <aside
@@ -36,7 +32,9 @@ export function Shell({
         aria-label="Admin navigation"
       >
         <div className="mb-8 flex items-center gap-3">
-          <span className="grid size-10 place-items-center rounded-lg bg-blue-600 font-extrabold">A</span>
+          <span className="grid size-10 place-items-center rounded-lg bg-blue-600 font-extrabold">
+            A
+          </span>
           <div>
             <strong className="block">Agentica</strong>
             <span className="block text-sm text-slate-400">Admin</span>
@@ -57,7 +55,9 @@ export function Shell({
                 <NavLink
                   className={({ isActive }) =>
                     `flex min-h-10 w-full items-center rounded-lg px-3 text-left text-sm font-semibold ${
-                      isActive ? "bg-slate-800 text-white" : "text-slate-300 hover:bg-slate-800 hover:text-white"
+                      isActive
+                        ? "bg-slate-800 text-white"
+                        : "text-slate-300 hover:bg-slate-800 hover:text-white"
                     }`
                   }
                   end={item.key === "dashboard"}

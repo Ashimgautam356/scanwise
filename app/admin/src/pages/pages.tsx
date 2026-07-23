@@ -104,7 +104,10 @@ function DashboardPage({ data, syncedAt }: PageProps) {
         <Panel title="Recent activity" eyebrow="Activity">
           <ul className="grid gap-3.5">
             {data.activities.map((activity) => (
-              <li className="border-l-4 border-blue-600 pl-3 leading-6 text-slate-700" key={activity.event}>
+              <li
+                className="border-l-4 border-blue-600 pl-3 leading-6 text-slate-700"
+                key={activity.event}
+              >
                 <strong className="block">{activity.event}</strong>
                 <span className="mt-1 block text-xs text-slate-500">
                   {activity.owner} · {activity.time}
@@ -144,7 +147,22 @@ function ProductsPage({ data, syncedAt }: PageProps) {
           ]}
         />
       </Panel>
-      <EditGrid fields={["Product Name", "Description", "Brand", "SKU", "Barcode", "Category", "Price", "Discount", "Stock Quantity", "Images", "Specifications", "Product Status"]} />
+      <EditGrid
+        fields={[
+          "Product Name",
+          "Description",
+          "Brand",
+          "SKU",
+          "Barcode",
+          "Category",
+          "Price",
+          "Discount",
+          "Stock Quantity",
+          "Images",
+          "Specifications",
+          "Product Status",
+        ]}
+      />
     </>
   );
 }
@@ -226,7 +244,9 @@ function OrdersPage({ data, syncedAt }: PageProps) {
           ]}
         />
       </Panel>
-      <StatusStrip values={["Pending", "Confirmed", "Processing", "Shipped", "Delivered", "Cancelled"]} />
+      <StatusStrip
+        values={["Pending", "Confirmed", "Processing", "Shipped", "Delivered", "Cancelled"]}
+      />
     </>
   );
 }
@@ -290,7 +310,9 @@ function AdminsPage({ data, syncedAt }: PageProps) {
         description="Manage administrator roles, permissions, account state, and access recovery."
         syncedAt={syncedAt}
       />
-      <ToolRow actions={["Create Administrator", "Assign Permissions", "Suspend", "Reset Password"]} />
+      <ToolRow
+        actions={["Create Administrator", "Assign Permissions", "Suspend", "Reset Password"]}
+      />
       <Panel title="Administrator accounts" eyebrow="Restricted">
         <DataTable
           rows={data.admins}
@@ -320,7 +342,15 @@ function AiPage({ data, syncedAt }: PageProps) {
           <MetricRows rows={data.aiMetrics} />
         </Panel>
         <Panel title="Configuration" eyebrow="LLM">
-          <FieldGrid fields={["LLM Provider", "Temperature", "Max Tokens", "Prompt Templates", "Rate Limits"]} />
+          <FieldGrid
+            fields={[
+              "LLM Provider",
+              "Temperature",
+              "Max Tokens",
+              "Prompt Templates",
+              "Rate Limits",
+            ]}
+          />
         </Panel>
       </section>
     </>
@@ -363,7 +393,10 @@ function AnalyticsPage({ data, syncedAt }: PageProps) {
       />
       <section className="mb-4 grid grid-cols-4 gap-4 max-lg:grid-cols-2 max-sm:grid-cols-1">
         {data.analytics.map((item) => (
-          <article className="grid min-h-32 gap-2.5 rounded-lg border border-slate-200 bg-white p-4" key={item.label}>
+          <article
+            className="grid min-h-32 gap-2.5 rounded-lg border border-slate-200 bg-white p-4"
+            key={item.label}
+          >
             <span className="text-sm font-bold text-slate-500">{item.label}</span>
             <strong className="text-3xl font-bold">{item.value}</strong>
             <small className="text-xs text-slate-500">{item.detail}</small>
@@ -457,7 +490,10 @@ function FieldGrid({ fields }: { fields: string[] }) {
       {fields.map((field) => (
         <label className="grid gap-2" key={field}>
           <span className="text-xs font-bold text-slate-500">{field}</span>
-          <input className="min-h-10 w-full rounded-lg border border-slate-200 px-3 text-slate-950" placeholder={field} />
+          <input
+            className="min-h-10 w-full rounded-lg border border-slate-200 px-3 text-slate-950"
+            placeholder={field}
+          />
         </label>
       ))}
     </div>
@@ -468,7 +504,10 @@ function MetricRows({ rows }: { rows: { label: string; value: string }[] }) {
   return (
     <div className="grid gap-3">
       {rows.map((row) => (
-        <div className="flex items-center justify-between gap-4 border-b border-slate-200 pb-3 last:border-b-0 last:pb-0" key={row.label}>
+        <div
+          className="flex items-center justify-between gap-4 border-b border-slate-200 pb-3 last:border-b-0 last:pb-0"
+          key={row.label}
+        >
           <span className="text-slate-500">{row.label}</span>
           <strong>{row.value}</strong>
         </div>

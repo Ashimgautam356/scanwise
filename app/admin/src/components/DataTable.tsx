@@ -32,7 +32,10 @@ export function DataTable<Row extends Record<string, string | number>>({
           {rows.map((row, rowIndex) => (
             <tr key={rowIndex}>
               {columns.map((column) => (
-                <td className="border-b border-slate-200 px-3 py-3.5 align-middle text-sm text-slate-700 last:border-b-0" key={String(column.key)}>
+                <td
+                  className="border-b border-slate-200 px-3 py-3.5 align-middle text-sm text-slate-700 last:border-b-0"
+                  key={String(column.key)}
+                >
                   {column.render ? column.render(row) : row[column.key]}
                 </td>
               ))}

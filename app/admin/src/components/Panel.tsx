@@ -22,7 +22,9 @@ export function Panel({
       <div className="mb-4 flex items-start justify-between gap-4">
         <div>
           {eyebrow ? (
-            <p className="mb-2 text-xs font-extrabold uppercase tracking-normal text-blue-600">{eyebrow}</p>
+            <p className="mb-2 text-xs font-extrabold uppercase tracking-normal text-blue-600">
+              {eyebrow}
+            </p>
           ) : null}
           <h2 className="text-lg font-bold leading-tight">{title}</h2>
         </div>
