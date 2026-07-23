@@ -1,6 +1,7 @@
 import cors from "cors";
 import express from "express";
 import helmet from "helmet";
+import { errorHandler, notFoundHandler } from "./errors/middleware.js";
 
 const adminData = {
   stats: [
@@ -186,6 +187,9 @@ export function createApp() {
       ...adminData,
     });
   });
+
+  app.use(notFoundHandler);
+  app.use(errorHandler);
 
   return app;
 }
